@@ -1,0 +1,73 @@
+{% load static %}
+<!-- Login -->
+<div class="container login-form">
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="modal-title text-center">Login </div>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action='/login' method='POST' id='myFormId'>
+                    {% csrf_token %}
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12 pt-4">
+                                <input type="text" id="fname" name='username' class="form-control" placeholder="UserName" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+
+
+                            <div class="col-md-12 pt-4">
+                                <input type="Password" id="pass" name='password' class="form-control" placeholder="Password" required>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="row form-group  pt-2">
+                            <div class="col-md-12 text-center">
+                                <input type="submit" class="ban-btn" value="Login">
+                            </div>
+
+
+                        </div>
+                    </form>
+
+
+                    <div class="row pt-5 mt-3 login-social">
+                        <div class="col-md-12">
+                            <img src="{% static 'img/login-facebook.png' %}">
+                        </div>
+
+                        <div class="col-md-12 pt-4">
+                            <img src="{% static 'img/login-google.png' %}">
+                        </div>
+                        <div class="col-md-12 pt-4">
+                            <img src="{% static 'img/login-out.png' %}">
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Login end -->

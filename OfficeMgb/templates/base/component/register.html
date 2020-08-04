@@ -1,0 +1,87 @@
+<!-- Register -->
+<div class="container login-form">
+    <div class="modal fade" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="modal-title">Sign Up </div>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action='/register' method='POST' id='myFormId'>
+                    {% csrf_token %}
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12 pt-1">
+                                <input type="text" id="name" name='name' class="form-control" placeholder="Name" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12 pt-1">
+                                <input type="text" id="name" name='username' class="form-control" placeholder="UserName" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12 pt-1">
+                                <input type="text" id="email" name='email' class="form-control" placeholder="Email" required>
+                            </div>
+
+                        </div>
+                        <div class="row form-group">
+
+                            <div class="col-md-12 pt-1">
+                                <input type="number" id="phone" name='phone' class="form-control" placeholder="Mobile" required>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row form-group">
+
+                            <div class="col-md-12 pt-1">
+                                <input type="Password" id="password" name='password' class="form-control" placeholder="Password" required>
+                            </div>
+
+                        </div>
+                        <div class="row form-group">
+
+                            <div class="col-md-12 pt-1">
+                                <input type="password" id="cpassword" name='cpassword' class="form-control" placeholder="Confirm Password" required>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row form-group  pt-2">
+                            <div class="col-md-12 text-center">
+                                <input type="submit" class="ban-btn" value="Register">
+                            </div>
+
+
+                        </div>
+
+
+
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register End -->

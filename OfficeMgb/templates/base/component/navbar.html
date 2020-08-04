@@ -1,0 +1,53 @@
+<header class="head">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 emailinfo">
+                <ul>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i> info@example.com</li>
+                    <li>|</li>
+                    <li><i class="fa fa-phone-square" aria-hidden="true"></i> 800 567.890.11</li>
+                </ul>
+            </div>
+            <div class="col-md-3 loginpros offset-md-5 head-social">
+                <ul>
+                    <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section class="menu-head">
+    <div class="container-fluid">
+        <div class="row ml-3 mr-3">
+            <div class="col-md-3 logo">Glove <span>Box</span></div>
+            <div class="col-md-6 menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Glove</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Faq</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-3 loginpros">
+                <ul>
+                {% if user.is_authenticated %}
+                    {% comment %} <a>Hii {{ user }}</a> {% endcomment %}
+                    <li><a href="logout/{{ user.id }}">LogOut</a></li>
+                {% else %}
+                    <li><a href="" data-toggle="modal" data-target="#myModal1">Login</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#myModal2">Sign Up</a></li>
+                {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
