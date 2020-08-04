@@ -14,7 +14,6 @@ class UserProfile(models.Model):
     )
     phone = models.IntegerField(
         default=256,
-        max_length=256
     )
 
     def __str__(self):
