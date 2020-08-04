@@ -10,11 +10,9 @@ class UserProfile(models.Model):
     )
     name = models.CharField(
         max_length=50,
-        blank=True,
-        default='Unknown'
+        default=''
     )
     phone = models.IntegerField(
-        blank=True,
         default=256,
         max_length=256
     )
